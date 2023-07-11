@@ -1,5 +1,7 @@
 import amqp, { Message } from 'amqplib/callback_api'
 
+
+
 const createMQConsumer = (amqpURl: string, queueName: string) => {
   console.log('Connecting to RabbitMQ...')
   return () => {

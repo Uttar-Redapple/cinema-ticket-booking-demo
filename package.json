@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "dev": "eslint --fix --ext .ts ./src && nodemon",
+    "dev": "nodemon",
     "lint": "eslint --fix --ext .ts ./src"
   },
   "keywords": [],

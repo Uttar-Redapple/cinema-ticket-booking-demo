@@ -1,0 +1,21 @@
+version: '2.0'
+volumes:
+  data: 
+  database:
+services:
+  mongodb:
+    image: 'mongo:latest'
+    restart: always
+    volumes:
+      - 'database:/data/db'
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: mongo_user
+      MONGO_INITDB_ROOT_PASSWORD: ^zTr57e5Wo6H
+    ports:
+      - '8081:27017'
+  rabbitmq:
+    image: 'rabbitmq:latest'
+    restart: always
+    ports:
+      - '15672:15672'
+      - '5672:5672'
